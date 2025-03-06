@@ -1,0 +1,675 @@
+:root {
+    --heading-text-size: 20px;
+    --Font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00819f;
+}
+
+.main-div {
+    height: 850px; /* Change height to percent */
+    width: 25%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: white;
+    /* background-color: #0062ff; */
+    border-radius: 10px;
+    /* border: 3px solid saddlebrown; */
+}
+
+.sub-div {
+    width: 100%;
+    height: 96%;
+    /* background-color:goldenrod; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sec1 {
+    width: 50%;
+    height: 3rem;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 10px; */
+}
+
+#p1 , #p2 {
+    font-family: var(--Font);
+    font-weight: 700;
+}
+
+#p3 {
+    font-family: var(--Font);
+}
+
+a {
+    text-decoration: none;
+    /* color: chocolate; */
+}
+
+input::placeholder {
+    color: #c3c3c3;
+}
+
+.sec2 {
+    width: 50%;
+    margin-left: 5px;
+    padding: 5px;   
+    /* background-color: brown; */
+}
+
+/* sec 3 */
+.sec3 {
+    margin-top: 10px;
+    height: 95%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: saddlebrown;    */
+    /* margin-left: 10px; */
+}
+
+/* Detail 1 */  
+.det1 {
+    width: 98%;
+    height: 4rem;  
+    /* background-color:darkolivegreen; */
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-subdet1 {
+    width: 91%;
+    height: 65%;
+    /* margin-left: 5px; */
+    /* background-color: darkmagenta; */
+    display: flex;
+}
+
+.subdet1-1 {
+    width: 8%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subdet1-2 {
+    width: 90.5%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+#img3 {
+    opacity: .35;
+    width: 17px;
+    height: 17px;
+}
+
+#n1 {
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:2px solid black;
+    background-color: #f4f4f4;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#n1:focus {
+    outline: none;
+}
+
+/* Detail 2 */
+.det2 {
+    width: 98%;
+    height: 4rem;
+    /* background-color: blueviolet; */
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* margin-left: 5px; */
+    margin-top: 10px;
+}
+
+
+.main-subdet2 {
+    width: 100%;
+    height: 4rem;
+    /* margin-left: 5px; */
+    /* background-color:crimson; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subdet2-1 {
+    width: 50%;
+    height: 60%;
+    /* background-color:chartreuse */
+}
+
+.subdet2-2 {
+    width: 50%;
+    height: 60%;
+    /* background-color:darkorange */
+}
+
+#d1 {
+    width: 75%;
+    height: 100%;
+    margin-left: 5px;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    border: none;
+    padding-left: 10px;
+    background-color: #f4f4f4;
+}
+
+#d1:focus {
+    outline: none;
+}
+
+.s1 {
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #f4f4f4;
+    color: #495057;
+    padding-left: 10px;
+}
+
+.s1:active {
+    outline: none;
+}
+
+/* option {
+    color: aqua;
+} */
+
+
+#OP1 {
+    color: white;
+}
+
+/* Detail 3 */
+.det3 {
+    width: 98%;
+    height: 4rem;
+    /* background-color: crimson; */
+    margin-top: 10px;
+    /* border: 2px solid black; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+img {
+    width: 25px;
+    height: 20px;
+}
+
+.main-subdet3 {
+    width: 90%;
+    height: 70%;
+    /* background-color:darkblue; */
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    /* margin-left: 5px; */
+    display: flex;
+}
+
+.subdet3-1 {
+    width: 17%;
+    height: 100%;
+    border: none;   
+    /* padding-left: 10px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: whitesmoke    ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid black; */
+    /* margin-left: 5px; */
+}
+
+/* .flagDet {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 5px;
+    padding-left: 5px;border: 2px solid black;
+} */
+
+/* .codeDet {
+    width: 50%; 
+    display: flex;
+    align-items: center;
+    background-color: chartreuse;
+} */
+
+#p4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color:#495057;
+    /* overflow: hidden; */
+    /* background-color: #0062ff; */
+    /* opacity: .5; */  
+    /* padding-left: 10px; */
+}
+
+.subdet3-2 {
+    height: 100%;
+    width: 81%;
+    /* background-color: whitesmoke; */
+    /* background-color: #0062ff; */
+    /* margin-left: 10px; */
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    /* margin-top: -2px; */
+    /* background-color:chocolate; */
+}
+
+#mob {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    /* border: 2px solid black; */
+    /* margin-left: 5px; */
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#mob:focus {
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Detail 4 */
+.det4 {
+    width: 98%;
+    height: 4rem;
+    /* background-color: darkgreen; */
+    margin-top: 10px;
+    display: flex;
+    /* justify-content:center; */
+    align-items: center;
+}
+
+.main-subdet4 {
+    width: 90%;
+    height: 70%;
+    /* background-color: blue; */
+    /* margin-left: 5px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.subdet4-1 {
+    width: 7%;
+    height: 100%;
+    background-color: whitesmoke    ;
+    /* border: 2px solid black; */
+    /* background-color: aqua; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img1 {
+    width: 20px;
+    height: 20px;
+    opacity: 0.35;
+    /* color: black; */
+    /* margin-left: 5px; */
+}
+
+.subdet4-2 {
+    width: 92%;
+    height: 100%;
+    border: none;
+    /* background-color: aqua; */
+    /* border: 5px solid black; */
+}
+
+#em {
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background-color:#f4f4f4;
+    /* border: 2px solid black; */
+    /* margin-left: 5px; */
+}
+
+#em:focus {
+    outline: none;
+}
+
+/* Detail 5 */
+.det5 {
+    width: 98%;
+    height: 4rem;
+    /* background-color:crimson; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 5px; */
+}
+
+.subdet5-1 {
+    width: 50%;
+    height: 60%;
+    /* background-color:chartreuse */
+}
+
+.subdet5-2 {
+    width: 50%;
+    height: 60%;
+    /* background-color:darkorange */
+}
+
+.s2 {
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    font-family: var(--Font);
+    padding-left: 10px;
+    /* margin-left: 3px; */
+    border: none;
+    color: #495057;
+    background-color: #f4f4f4;
+}
+
+.s2:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+.s2 option[disabled] {
+    color: #c3c3c3;
+}
+
+/* .s2:invalid {
+    color: #f4f4f4;
+} */
+
+.s3 {
+    width: 73%;
+    height: 100%;
+    border-radius: 10px;
+    font-family: var(--Font);
+    padding-left: 10px;
+    margin-left: 5px;
+    border: none;
+    color: #495057;
+    background-color:#f4f4f4;
+}
+
+.s3:focus {
+    outline: none;
+}
+
+/* Detail 6 */
+.det6 {
+    width: 98%;
+    height: 4rem;;
+    margin-top: 10px;
+    /* background-color: darkkhaki; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.main-subdet6 {
+    width: 90%;
+    height: 70%;
+    /* margin-left: 5px; */
+    /* background-color: yellow; */
+    display: flex;
+}
+
+.subdet6-1 {
+    width: 7%;
+    height: 100%;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#img2 {
+    width: 20px;
+    height: 20px;
+    opacity: .35;
+}
+
+.subdet6-2 {
+    width: 100%;
+    height: 100%;
+    /* background-color: chartreuse; */
+}
+
+.s4 {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    border: none;
+    /* background-color: #0062ff; */
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    color: #c3c3c3;
+    /* line-height: 4rem; */
+}
+
+/* #def1 {
+    color: #c3c3c3;
+}  */
+
+.s4:focus {
+    outline: none;
+}
+
+/* Detail 8 */
+
+.det8 {
+    width: 98%;
+    height: 4rem;  
+    /* background-color:darkolivegreen; */
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.main-subdet8 {
+    width: 90%;
+    height: 65%;
+    /* background-color: coral; */
+    display: flex;
+    /* margin-left: 5px; */
+    border-radius: 10px;
+}
+
+.subdet8-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    background-color: whitesmoke;
+    width: 7%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#img4 {
+    opacity: .4;
+    width: 18px;
+    height: 18px;
+}
+
+.subdet8-2 {
+    width: 93%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+}
+
+.subdet8-2-1 {
+    width: 100%;
+    height: 100%;
+}
+
+.subdet8-2-2 {
+    width: 10%;
+    height: 100%;
+    background-color: #f4f4f4;
+    /* background-color: #0062ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#img5 {
+    width: 20px;    
+    height: 20px;
+}
+
+#bt1 {
+    /* background-color: brown; */
+    border: none;
+    cursor: pointer;
+}
+
+#pass {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+    background-color: #f4f4f4;
+}
+
+#pass:active {
+    outline: none;
+}
+
+#pass:focus {
+    outline: none;
+}
+
+/* Detail 7 */
+.det7 {
+    /* background-color:gold; */
+    margin-top: 10px;
+    width: 98%;
+    height: 5rem;
+    display: flex;
+    /* margin-left: 5px; */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.final-button {
+    width: 20%; /* Ensure it takes the desired width */
+    height: 50%;     /* Fixed height for the container */
+    background-color: #0062ff;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex; /* Use flexbox to align the button */
+    /* justify-content: center;  Center horizontally */
+    align-items: center; /* Center vertically */
+    /* margin-left: 5px; */
+    margin-right: 10px;
+}
+
+.final-button button {
+    width: 100%; /* Make the button take the full width of the container */
+    height: 100%; /* Make the button take the full height of the container */
+    border: none; /* Remove default border */
+    color: white; /* Button text color */
+    background-color: transparent; /* Ensure the button inherits background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.final-button button:hover {
+    background-color: #0062ff; /* Optional: Add hover effect */
+    border-radius: 10px ;
+}
+
+
+
+
+/* Select2 Integration  */
+.select2-container { 
+    background-color: orange;
+    /* line-height:normal;  */
+}
+
+
+
+
+
+
+
+
+
+

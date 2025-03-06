@@ -1,0 +1,24 @@
+.rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}

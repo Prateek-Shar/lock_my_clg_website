@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="script2.js" defer></script>
+
+</head>
+<body>
+
+<div class="main-div">
+    
+    <div class="sub-div">
+        <div class="sec1">
+            <p id = "p1">To Sign Up</p>
+            <p id = "p2">please enter the following details</p>
+        </div>
+
+        <div class="sec2">
+            <p id="p3">Already a User? <a href="Login.html">Sign In</a></p>
+        </div>
+        
+        <form action="/registerForm" method="post">    
+            <div class="sec3">
+
+                <div class="det1">
+                    <div class="main-subdet1">
+                        <div class="subdet1-1">
+                            <img src="user.png" id="img3">
+                        </div>
+
+                        <div class="subdet1-2">
+                            <input type="text" id="n1" placeholder="Enter Full Name" name="full_name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="det2">
+                    <div class="main-subdet2">
+                        <div class="subdet2-1">
+                            <input type="text" class="s1" placeholder="Select Gender" name="Gender" onclick="replaceInputWithSelect()" required >
+                        </div>
+
+                        <div class="subdet2-2">
+                            <!-- <label for="DOB">Date of Birth</label> -->
+                            <input type="text" id="d1" name="calender" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="det3">
+                    <div class="main-subdet3">
+                        <!-- <div class="subdet3-1"> -->
+                        <div class="subdet3-1">
+                            <img src="flag.png">
+                            <!-- </div>
+                            <div class="codeDet"> -->
+                            <p id="p4">+91</p>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="subdet3-2">
+                            <input type="number" id="mob" name="mob" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="det4">
+                    <div class="main-subdet4">
+                        <div class="subdet4-1">
+                            <img src="envelope.png" id="img1">
+                        </div>
+
+                        <div class="subdet4-2">
+                            <input type="text" name="email" id="em" placeholder="Enter Email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="det8">
+                    <div class="main-subdet8">
+                        <div class="subdet8-1">
+                            <img src="key.png" id="img4">
+                        </div>
+                        <div class="subdet8-2">
+                            <div class="subdet8-2-1">
+                                <input type="password" name="password" id="pass" placeholder="Create Password" required>
+                            </div>
+                            <div class="subdet8-2-2">
+                                <button type="button" id="bt1">
+                                    <img src="pass_show.png" id="img5">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="det6">
+                    <div class="main-subdet6">
+
+                        <div class="subdet6-1">
+                            <img src="learning.png" id="img2">
+                        </div>
+
+                        <div class="subdet6-2">
+                            <select class="s4" id="s4" name="Course" required>
+                                <option id="def1" disabled selected >Select Course</option>
+                                <option name="Course">asdfgh</option>
+                                <option name="Course">asdfsdgfh</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="det5">
+                    <div class="subdet5-1">
+                        <input type="text" class="s2" name="State" placeholder="Select State" onfocus="replaceStateInputWithSelect()" required>
+                    </div>
+
+                    <div class="subdet5-2">
+                        <input type="text" class="s3" name="City" placeholder="Select City" onclick="replaceCityInputWithSelect()" required>
+                    </div>
+                </div>
+
+                <div class="det7">
+                    <div class="final-button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!---To be used when using <select> tag--->
+<!-- <select class="s1" name="options">
+    <option id="op1" selected disabled>Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>    
+</select> -->
+
+</body>
+</html>

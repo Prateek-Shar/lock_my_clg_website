@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="form1.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+   
+    <div class="main-div">
+        <div class="sub-div">
+
+            <div class="head1">
+                <h2 id = "p2">Top Colleges and Courses</h2>
+            </div>
+
+            <div class="elementor-divide">
+                <div class="first-divide">
+                    <hr id="hr1">
+                </div>
+
+                <div class="second-divide">
+                    <i class="fa-solid fa-graduation-cap" id="i1"></i>
+                </div>
+
+                <div class="third-divide">
+                    <hr id="hr2">
+                </div>
+            </div>
+
+            <div class="features">
+                <label><input type="checkbox" checked> Free Personalized Counselling</label>
+                <label><input type="checkbox" checked> 100% Placement Assistance</label>
+            </div>
+
+            <form id = "form" action="/form1Process" method="post">
+                <div class="sec1">
+
+                    <div class="form-grp1">
+                        <div class="input1">
+                            <!-- <label for="name">Full Name</label> -->
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="input1">
+                            <!-- <label for="phone">Enter Mobile Number</label> -->
+                            <input type="tel" id="phone" name="phone" placeholder="Enter Mobile Number" required>
+                        </div>
+                        <div class="input1">
+                            <!-- <label for="email">Enter your email</label> -->
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                    
+                        <div class="bt">    
+                            <div class="sub-bt">
+                                <button type="submit" id ="submit-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </form>
+        </div>
+    </div>  
+
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+:root {
+    --buttonBg:linear-gradient(to right , #008b8b , #ffac41)
+}
+
+
+.main-div2 {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #04933F; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-div2 {
+    width: 32vw;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid black; */
+    /* background-color: aqua; */
+
+} 
+
+
+.sec2 {
+    width: 80%;
+    height: 90%;
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid #0093ac;
+    /* margin-top: 50px; */
+    /* border: 2px solid saddlebrown; */
+}
+
+.head2 {
+    width: 95%;
+    height: 50px; 
+    /* background-color: blue;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+    /* margin-top: 20px; */
+} 
+
+form {
+    /* border: 2px solid orange; */
+    width: 90%;
+}
+
+
+.form-grp2 {
+    width: 95%;
+    height: 100px; 
+    /* background-color: #04933F;  */
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 2px saddlebrown; */
+} 
+
+#p3 {
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input2 #yes {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.input2 label {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input2 {
+    margin-top: 10px;
+}
+
+.input2 #no {
+    margin-right: 10px;
+    margin-left: 10px;
+} 
+
+.bt-sec2 {
+    width: 95%;
+    height: 50px; 
+    /* background-color: blueviolet;  */
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: center;
+    align-items: center;
+    margin:10px 10px 10px 10px;
+} 
+
+.sub-bt-sec2 {
+    width: 50%;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    margin-right: 10px;
+} 
+
+.sub-prev-bt {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse; 
+    margin-right: 10px;
+} 
+
+#submit-btn1 {
+    width: 100px;
+    height: 30px; 
+    margin-left: 10px; 
+    border-radius: 7px;
+} 
+
+#submit-btn1:hover {
+    background: var(--buttonBg);
+}
+
+#previous-btn1 {
+    width: 100px;
+    height: 30px; 
+    border-radius: 7px;
+} 
+
+#previous-btn1:hover {
+    background: var(--buttonBg);
+}

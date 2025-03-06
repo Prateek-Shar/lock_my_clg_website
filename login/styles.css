@@ -1,0 +1,8 @@
+/* Select2 Integration */
+.select2-container {
+    width: 100%;
+    height: 100%; /* Ensure it matches parent height */
+    display: flex;
+    align-items: center;
+    /* background-color: brown; */
+}
