@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IIM Ahmedabad</title>
     <link rel="stylesheet" href="clg1.css">
+    <link rel="stylesheet" href="../navbar.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -26,21 +27,22 @@
 
         <div class="nav-sec2">
             <div class="link1">
-                <a href="index.html" id="a1">Home</a>
+                <a href="/render_index" id="a1">Home</a>
             </div>
-            
-            <!-- <div class="link2">
-                <a href="#" id="a2">About</a>
-            </div>
-
-            <div class="link3">
-                <a href="#" id="a3">FAQ</a>
-            </div> -->
+         
         </div>
 
         <div class="nav-sec3">
             <div class="register">
-                <a href="#" id="a4">Register</a>
+                <a href="/register" id="a4">Register</a>
+            </div>
+
+            <div class="login-panel" id="login-panel">
+                <div class="login-panel-content">
+                    <img src="../images/graduate.png" id="user-avatar">
+                    <p id="user-name">Welcome, User</p>
+                    <button id="logout-btn">Logout</button>
+                </div>
             </div>
         </div>
 
@@ -50,22 +52,22 @@
     <div class="Hero-img-head">
         
         <div class="hero-img">
-            <img src="iim-ahmedabad-logo.jpg" id="img1">
+            <img src="iim-ahmedabad-cover.jpg" id="img1">
         </div>
 
         <div class="det2">
             <div class="subdet2">
                 <div class="clg1-logo">
-                    <img src="iim-ahmedabad-logo2.jpeg" id="img2">
+                    <img src="iim-ahmedabad-logo.jpeg" id="img2">
                 </div>
 
                 <div class="subdet2-1">
                     <div class="subdet2-cont1">
-                        <p id="p2">IIM Bangalore - Indian Instite of Management</p>
+                        <p id="p2">IIM Ahemdabad - Indian Instite of Management</p>
                     </div>
 
                     <div class="subdet2-cont2">
-                        <p id="p3">Address - Bannerghatta Rd, opp. to Apollo Hospitals, Sundar Ram Shetty Nagar, Bilekahalli, Bengaluru, Karnataka 560076</p>
+                        <p id="p3">Address - 2GMM+54C, Sargam Marg, I I M, Vastrapur, Ahmedabad, Gujarat 380015</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +95,7 @@
             </div>
 
             <div class="Reviews-link">
-                <a href="/render_all_reviews" id="Reviews-text">Reviews</a>
+                <a href="/iim_ahemdabad_render_all_reviews" id="Reviews-text">Reviews</a>
             </div>
 
         </div>
@@ -159,5 +161,8 @@
     </div>
         
     
+    <script src="auth.js" defer></script>
+    <script src="handle_script.js"></script>
+
 </body>
 </html>

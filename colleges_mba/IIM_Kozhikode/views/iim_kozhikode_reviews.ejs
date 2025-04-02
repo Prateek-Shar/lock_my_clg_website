@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="iim_kozikhode_review.css"> <!-- Optional CSS -->
+    <link rel="stylesheet" href="../navbar.css">
+    <script src="review_handle_iim_kozikhode.js" defer></script>
+</head>
+<body>  
+
+    <div class="navbar">
+        <div class="nav-sec1">
+            <div class="logo-container">
+                <img src="images/LMC-web-logo.webp" id="img1">
+            </div>
+            <div class="tagline">
+                <p id="p1">#Your Smarter Choice</p>
+            </div>
+        </div>
+        <div class="nav-sec2">
+            <div class="link1">
+                <a href="index.html" id="a1">Home</a>
+            </div>
+            <!-- <div class="link2">
+                <a href="#" id="a2">About</a>
+            </div>
+            <div class="link3">
+                <a href="#" id="a3">FAQ</a>
+            </div> -->
+        </div>
+        <div class="nav-sec3">
+            <div class="register">
+                <a href="#" id="a4">Register</a>
+            </div>
+
+            <div class="login-panel" id="login-panel">
+                <div class="login-panel-content">
+                    <img src="../images/graduate.png" id="user-avatar">
+                    <p id="user-name">Welcome, User</p>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Hero-img-head">
+        <div class="hero-img">
+            <img src="iim_kozhikode_cover.jpg" id="img1">
+        </div>
+        <div class="det2">
+            <div class="subdet2">
+                <div class="clg1-logo">
+                    <img src="iim_kozhikode_logo.png" id="img2">
+                </div>
+                <div class="subdet2-1">
+                    <div class="subdet2-cont1">
+                        <p id="p2">IIM Kozhikode - Indian Institute of Management</p>
+                    </div>
+                    <div class="subdet2-cont2">
+                        <p id="p3">Address - IIMK Campus P. O, Kunnamangalam, Kerala 673570</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="headings-navigate">
+        <div class="all-links">
+            <div class="link2">
+                <a href="/iim_kozhikode_info" id="a2">College Info</a>
+            </div>
+            <div class="link3">
+                <a href="/iim_kozhikode_course_fee" id="a3">Courses Offered & Fee</a>
+            </div>
+            <div class="Cut-offs-link">
+                <a href="/iim_kozhikode_cutoff" id="Cut-offs-text">Cut Off</a>
+            </div>
+            <div class="Reviews-link">
+                <a href="/iim_kozhikode_hostel_campus" id="Reviews-text">Hostel and Campus</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-review-box">
+
+        <div class="sub-review-box1">
+            <div class="main-heading">
+                <p id="p1">Why Join XLRI - Jamshedpur</p>
+            </div>
+
+            <div class="clg-rating">
+                <div class="main-clg-rating">
+                    <div class="left-review-box">
+                        
+                            <div class="rating-text">
+                                <p id="p2">0</p>
+                            </div>
+
+                            <div class="rating-image">
+                                
+                                <img src="images/star.png" class="star" data-value="1" />
+                                <img src="images/star.png" class="star" data-value="2" />
+                                <img src="images/star.png" class="star" data-value="3" />
+                                <img src="images/star.png" class="star" data-value="4" />
+                                <img src="images/star.png" class="star" data-value="5" />
+                                
+                            </div>
+
+                        <div class="Comp-Rating">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="main2-clg-rating"> 
+                    <div class="roc-text">
+                        <p id="p1">Rating of Components</p>
+                    </div>
+
+                    <div class="roc-main-box">
+
+                        <div class="roc-box1">
+                            <div class="det1">
+                                <p id="p1">Placement</p>
+                            </div>
+
+                            <div class="det2">
+                                <div id="starContainer" class="stars"></div>
+                            </div>
+                        </div>
+
+                        <div class="roc-box2">
+                            <div class="det1">
+                                <p id="p1">Campus Life</p>
+                            </div>
+
+                            <div class="det2">
+                                <div id="starContainer2" class="stars"></div>
+                            </div>
+                        </div>  
+
+                        <div class="roc-box3">
+                            <div class="det1">
+                                <p id="p1">Faculty</p>
+                            </div>
+
+                            <div class="det2">
+                                <div id="starContainer3" class="stars"></div>
+                            </div>
+                        </div>
+
+                        <div class="roc-box4"> 
+                            <div class="det1">
+                                <p id="p1">Infrastructure</p>
+                            </div>
+
+                            <div class="det2">
+                                <div id="starContainer4" class="stars"></div>
+                            </div>
+                        </div>
+
+                        <div class="roc-box5"> 
+                            <div class="det1">
+                                <p id="p1">College Curriculum</p>
+                            </div>
+
+                            <div class="det2">
+                                <div id="starContainer5" class="stars"></div>
+                            </div>
+                        </div>
+                          
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="review1">
+                <div class="sub-review1">
+                    <div class="sub-review1-part1" id="ReviewNumber" data-review-count="<%= reviewCount %>">
+                        <% if (reviewCount > 0) { %>
+                            
+                            <% for(let i = 0; i < all_review.length; i++) { %>
+                            <div class="review-block">
+                                <!-- First Child: Reviewer Details -->
+                                <div class="reviewer-details">
+                                    <div class="reviewer-details-part1">
+
+                                        <% let first_row = all_review[i] %>
+                                        <div class="review-item">
+                                            <div class="content1">
+                                                <p id="p1"><%= first_row.Name %></p>
+                                            </div>
+                            
+                                            <div class="content2">
+                                                <p id="p1"><%= first_row.College_Name %></p>
+                                            </div>
+                            
+                                            <div class="content3">
+                                                <p id="p1">Batch of <%= first_row.Completion_Year %></p>
+                                            </div>
+                            
+                                            <div class="content4">
+                                                <p id="p1"><%= first_row.Course_Name %></p>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="reviewer-details-part2">
+                                        
+                                        <div class="rating-item">
+                                            <div class="content6">
+                                                <p id="p1">Placement <%= Number(first_row.placement_rating).toFixed(1) %> ⭐</p>
+                                            </div>
+
+                                            <div class="content7">
+                                                <p id="p1">Infrastructure <%= Number(first_row.infrastructure_rating).toFixed(1) %> ⭐</p>
+                                            </div>
+
+                                            <div class="content8">
+                                                <p id="p1">Campus Life <%= Number(first_row.campus_life_rating).toFixed(1) %> ⭐</p>
+                                            </div>
+
+                                            <div class="content9">
+                                                <p id="p1">College Curriculum <%= Number(first_row. curriculum_rating).toFixed(1) %> ⭐</p>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+
+                                <!-- Second Child: Review Content -->
+                                <div class="review-content">
+                                    <div class="content5">
+                                
+                                        <div class="review-text">
+                                            <p id="p1"><%= first_row.Review %></p>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <% if (i < all_review.length - 1) { %>
+                                <!-- Space get Applied -->
+                            <% } %>
+                            <% } %>
+                        <% } %>
+
+                            
+                        </div>
+                        
+        
+                        <% if (reviewCount === 0) { %>
+                        <div class="no-reviews" id="ReviewNo">
+                            <p id="p1">No reviews available.</p>
+                            <div class="img-noReview">
+                                <img src="no-review.png" id="img1">
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sub-review-box2">
+
+            <div class="roc-text2">
+                <p id="p1">Discover what students and alumni have to say about their experiences. Hear firsthand how our college has shaped their academic and personal growth!</p> 
+            </div>
+            
+            <div class="review-bt"> 
+                <a href="/iim_kozhikode_write_review">
+                    <button id="bt1">Write a Review</button>
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="auth.js" defer></script>
+
+
+</body>
+</html>

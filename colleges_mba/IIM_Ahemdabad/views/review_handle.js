@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function fetchRating() {
     try {
-        const response = await fetch("/get_placement_rating");
+        const response = await fetch("/get_placement_rating_iim_ahemdabad");
         const data = await response.json();
         const rating = data.rating; 
 
@@ -35,16 +35,16 @@ async function fetchRating() {
         for (let i = 1; i <= totalStars; i++) {
             const star = document.createElement("span");
             if (i <= Math.floor(rating)) {
-                star.innerHTML = "★"; // Full star
+                star.innerHTML = `<img src="/images/filled_star.png" alt="Full Star" width="20" height="20">`; // Full star image
                 star.classList.add("gold");
-            } else if (i - 0.5 <= rating) {
-                star.innerHTML = "★"; // Half star
-                star.classList.add("half");
+            } else if (rating - i >= -0.5) { // ✅ Fix for half-star logic
+                star.innerHTML = `<img src="/images/half_star.png" alt="Half Star" width="20" height="20">`; // Half star image
             } else {
-                star.innerHTML = "☆"; // Empty star
+                star.innerHTML = `<img src="/images/star.png" alt="Empty Star" width="20" height="20">`; // Empty star image
             }
             starContainer.appendChild(star);
         }
+
     } catch (error) {
         console.error("Error fetching rating:", error);
     }
@@ -53,9 +53,10 @@ async function fetchRating() {
 fetchRating(); // Fetch rating on page load
 
 
+
 async function fetchRating2() {
     try {
-        const response = await fetch("/get_campus_life_rating");
+        const response = await fetch("/get_campus_life_rating_iim_ahemdabad");
         const data = await response.json();
         const rating = data.rating; 
 
@@ -66,16 +67,18 @@ async function fetchRating2() {
         for (let i = 1; i <= totalStars; i++) {
             const star = document.createElement("span");
             if (i <= Math.floor(rating)) {
-                star.innerHTML = "★"; // Full star
+                star.innerHTML = `<img src="/images/filled_star.png" alt="Full Star" width="20" height="20">`; // Full star image
                 star.classList.add("gold");
-            } else if (i - 0.5 <= rating) {
-                star.innerHTML = "★"; // Half star
+            } else if (rating - i + 1 >= 0.5) {
+                star.innerHTML = `<img src="/images/half_star.png" alt="Half Star" width="20" height="20">`; // Half star image
                 star.classList.add("half");
             } else {
-                star.innerHTML = "☆"; // Empty star
+                star.innerHTML = `<img src="/images/star.png" alt="Empty Star" width="20" height="20">`; // Empty star image
+                star.classList.add("empty");
             }
             starContainer.appendChild(star);
         }
+
     } catch (error) {
         console.error("Error fetching rating:", error);
     }
@@ -87,7 +90,7 @@ fetchRating2(); // Fetch rating on page load
 
 async function fetchRating3() {
     try {
-        const response = await fetch("/get_infrastructure_rating");
+        const response = await fetch("/get_infrastructure_rating_iim_ahemdabad");
         const data = await response.json();
         const rating = data.rating; 
 
@@ -98,16 +101,18 @@ async function fetchRating3() {
         for (let i = 1; i <= totalStars; i++) {
             const star = document.createElement("span");
             if (i <= Math.floor(rating)) {
-                star.innerHTML = "★"; // Full star
+                star.innerHTML = `<img src="/images/filled_star.png" alt="Full Star" width="20" height="20">`; // Full star image
                 star.classList.add("gold");
-            } else if (i - 0.5 <= rating) {
-                star.innerHTML = "★"; // Half star
+            } else if (rating - i + 1 >= 0.5) {
+                star.innerHTML = `<img src="/images/half_star.png" alt="Half Star" width="20" height="20">`; // Half star image
                 star.classList.add("half");
             } else {
-                star.innerHTML = "☆"; // Empty star
+                star.innerHTML = `<img src="/images/star.png" alt="Empty Star" width="20" height="20">`; // Empty star image
+                star.classList.add("empty");
             }
             starContainer.appendChild(star);
         }
+
     } catch (error) {
         console.error("Error fetching rating:", error);
     }
@@ -118,7 +123,7 @@ fetchRating3(); // Fetch rating on page load
 
 async function fetchRating4() {
     try {
-        const response = await fetch("/get_college_curriculum_rating");
+        const response = await fetch("/get_college_curriculum_rating_iim_ahemdabad");
         const data = await response.json();
         const rating = data.rating; 
 
@@ -129,16 +134,18 @@ async function fetchRating4() {
         for (let i = 1; i <= totalStars; i++) {
             const star = document.createElement("span");
             if (i <= Math.floor(rating)) {
-                star.innerHTML = "★"; // Full star
+                star.innerHTML = `<img src="/images/filled_star.png" alt="Full Star" width="20" height="20">`; // Full star image
                 star.classList.add("gold");
-            } else if (i - 0.5 <= rating) {
-                star.innerHTML = "★"; // Half star
+            } else if (rating - i + 1 >= 0.5) {
+                star.innerHTML = `<img src="/images/half_star.png" alt="Half Star" width="20" height="20">`; // Half star image
                 star.classList.add("half");
             } else {
-                star.innerHTML = "☆"; // Empty star
+                star.innerHTML = `<img src="/images/star.png" alt="Empty Star" width="20" height="20">`; // Empty star image
+                star.classList.add("empty");
             }
             starContainer.appendChild(star);
         }
+        
     } catch (error) {
         console.error("Error fetching rating:", error);
     }
@@ -148,7 +155,7 @@ fetchRating4(); // Fetch rating on page load
 
 async function fetchRating5() {
     try {
-        const response = await fetch("/get_faculty_rating");
+        const response = await fetch("/get_faculty_rating_iim_ahemdabad");
         const data = await response.json();
         const rating = data.rating; 
 
@@ -159,16 +166,18 @@ async function fetchRating5() {
         for (let i = 1; i <= totalStars; i++) {
             const star = document.createElement("span");
             if (i <= Math.floor(rating)) {
-                star.innerHTML = "★"; // Full star
+                star.innerHTML = `<img src="/images/filled_star.png" alt="Full Star" width="20" height="20">`; // Full star image
                 star.classList.add("gold");
-            } else if (i - 0.5 <= rating) {
-                star.innerHTML = "★"; // Half star
+            } else if (rating - i + 1 >= 0.5) {
+                star.innerHTML = `<img src="/images/half_star.png" alt="Half Star" width="20" height="20">`; // Half star image
                 star.classList.add("half");
             } else {
-                star.innerHTML = "☆"; // Empty star
+                star.innerHTML = `<img src="/images/star.png" alt="Empty Star" width="20" height="20">`; // Empty star image
+                star.classList.add("empty");
             }
             starContainer.appendChild(star);
         }
+
     } catch (error) {
         console.error("Error fetching rating:", error);
     }

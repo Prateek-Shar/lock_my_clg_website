@@ -1,3 +1,5 @@
+const loginPanel = document.querySelector("#login-panel");
+
 document.addEventListener("DOMContentLoaded" , () => {
 
     const collegeDesc = document.querySelectorAll('.college-desc'); // Select all divs inside .college-desc
@@ -121,13 +123,13 @@ document.addEventListener("DOMContentLoaded", () => {
     togglebt1.addEventListener("click", () => {
         if (paraShow2.style.display === "none") {
             paraShow2.style.display = "block";
-            togglebt1.src = "images/arrowheaddown.png";
+            togglebt1.src = "../images/arrowheaddown.png";
             paraShow1.style.borderBottomLeftRadius = "0";
             paraShow1.style.borderBottomRightRadius = "0";            
             paraShow2.style.borderBottomLeftRadius = "20px";
             paraShow2.style.borderBottomRightRadius = "20px";
         } else {
-            togglebt1.src = "images/arrowhead.png";
+            togglebt1.src = "../images/arrowhead.png";
             paraShow2.style.display = "none";
             // paraShow1.style.borderBottomLeftRadius = "0";
         }
@@ -143,9 +145,9 @@ document.addEventListener("DOMContentLoaded" , () => {
     togglebt2.addEventListener("click", () => {
         if (paraShow2.style.display === "none") {
             paraShow2.style.display = "block";
-            togglebt2.src = "images/arrowheaddown.png";
+            togglebt2.src = "../images/arrowheaddown.png";
         } else {
-            togglebt2.src = "images/arrowhead.png"; 
+            togglebt2.src = "../images/arrowhead.png"; 
             paraShow2.style.display = "none";
             
         }
@@ -161,9 +163,9 @@ document.addEventListener("DOMContentLoaded" , () => {
     togglebt3.addEventListener("click", () => {
         if (para3show.style.display === "none") {
             para3show.style.display = "block";
-            togglebt3.src = "images/arrowheaddown.png";
+            togglebt3.src = "../images/arrowheaddown.png";
         } else {
-            togglebt3.src = "images/arrowhead.png"; 
+            togglebt3.src = "../images/arrowhead.png"; 
             para3show.style.display = "none";
             
         }
@@ -178,9 +180,9 @@ document.addEventListener("DOMContentLoaded" , () => {
     togglebt4.addEventListener("click", () => {
         if (para4show.style.display === "none") {
             para4show.style.display = "block";
-            togglebt4.src = "images/arrowheaddown.png";
+            togglebt4.src = "../images/arrowheaddown.png";
         } else {
-            togglebt4.src = "images/arrowhead.png"; 
+            togglebt4.src = "../images/arrowhead.png"; 
             para4show.style.display = "none";
             
         }
@@ -195,9 +197,9 @@ document.addEventListener("DOMContentLoaded" , () => {
     togglebt5.addEventListener("click", () => {
         if (para5show.style.display === "none") {
             para5show.style.display = "block";
-            togglebt5.src = "images/arrowheaddown.png";
+            togglebt5.src = "../images/arrowheaddown.png";
         } else {
-            togglebt5.src = "images/arrowhead.png"; 
+            togglebt5.src = "../images/arrowhead.png"; 
             para5show.style.display = "none";
             
         }
@@ -233,16 +235,58 @@ searchInput.addEventListener('input', async () => {
       dropdown.innerHTML = '';
       if (data.results.length > 0) {
         dropdown.style.display = 'block';
+        dropdown.style.width = '100%';
+        dropdown.style.maxWidth = '950px';
+        dropdown.style.position = 'absolute';
+        dropdown.style.top = '100%';
+        dropdown.style.left = '50%';
+        dropdown.style.transform = 'translateX(-50%)';
+        dropdown.style.zIndex = '1000';
+        dropdown.style.backgroundColor = '#ffffff';
+        dropdown.style.borderRadius = '5px';
+        dropdown.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        dropdown.style.overflowY = 'hidden';
+        dropdown.style.maxHeight = 'none';
+        dropdown.style.overflowX = 'hidden';
+        dropdown.style.marginLeft = '10px';
+
         data.results.forEach(item => {
           const div = document.createElement('div');
           div.textContent = item.College_Name;
-          div.style.padding = '5px';
-          div.style.border = '1px solid black';
+          div.style.padding = '0 15px';
+          div.style.border = '1px solid #edeff4';
+          div.style.borderRadius = '5px';
+          div.style.cursor = 'pointer';
+          div.style.backgroundColor = '#ffffff';
+          div.style.width = '100%';
+          div.style.height = '45px';
+          div.style.lineHeight = '45px';
+          div.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+          div.style.fontSize = '16px';
+          div.style.color = '#363636';
+          div.style.transition = 'all 0.2s ease';
+          div.style.marginBottom = '5px';
+          div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+          div.style.display = 'flex';
+          div.style.alignItems = 'center';
+          div.style.justifyContent = 'flex-start';
+
+          div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = '#f6f7f9';
+            div.style.transform = 'translateY(-2px)';
+            div.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+          });
+
+          div.addEventListener('mouseout', () => {
+            div.style.backgroundColor = '#ffffff';
+            div.style.transform = 'translateY(0)';
+            div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+          });
 
           div.addEventListener('click', () => {
             searchInput.value = item.College_Name;
             dropdown.style.display = 'none';
-            image.disabled = false; // Enable the image now that a college is selected
+            image.disabled = false;
           });
 
           dropdown.appendChild(div);
@@ -275,7 +319,25 @@ image.addEventListener('click', () => {
     if (selectedCollege === 'IIM Ahemdabad') {
       targetPage = 'iim_ahemdabad.html';
     } else if (selectedCollege === 'IIM Lucknow') {
-      targetPage = 'Register.html';
+      targetPage = 'iim_lucknow.html';
+    } else if (selectedCollege === 'IIM Bangalore') {
+      targetPage = 'iim_bangalore.html';
+    } else if (selectedCollege === 'XLRI') {
+      targetPage = 'XLRI.html';
+    } else if (selectedCollege === 'IIM Calcutta') {
+      targetPage = 'iim_calcutta.html';
+    } else if (selectedCollege === 'IIM Kozhikode') {
+      targetPage = 'iim_kozhikode.html';
+    } else if (selectedCollege === 'Shaheed Sukhdev College of Business Studies') {
+      targetPage = 'sscbs.html';
+    } else if (selectedCollege === 'Christ University') {
+      targetPage = 'christ.html';
+    } else if (selectedCollege === 'Narsee Monjee Institute of Management Studies') {
+      targetPage = 'nmims.html';
+    } else if (selectedCollege === 'Symbiosis Centre for Management Studies') {
+      targetPage = 'scms.html';
+    } else if (selectedCollege === 'Mount Caramel') {
+      targetPage = 'mount_caramel.html';
     } else {
       alert('No Results Found');
       return; // Prevents further execution if no college is found.

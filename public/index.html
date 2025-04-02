@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lock My College</title>
+    <link rel="icon" href="images/LMC-web-logo.webp" type="image/webp">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
 
     <!-- Include CSS file -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -19,7 +21,7 @@
     
     <div class="nav-sec1">
         <div class="logo-container">
-            <img src="images/LMC-web-logo.webp" id="img1">
+            <img src="../images/LMC-web-logo.webp" id="img1">
         </div>
 
         <div class="tagline">
@@ -44,6 +46,14 @@
     <div class="nav-sec3">
         <div class="register">
             <a href="/register" id="a4">Register</a>
+        </div>
+
+        <div class="login-panel" id="login-panel">
+            <div class="login-panel-content">
+                <img src="../images/graduate.png" id="user-avatar">
+                <p id="user-name">Welcome, User</p>
+                <button id="logout-btn">Logout</button>
+            </div>
         </div>
     </div>
 
@@ -85,13 +95,16 @@
                 <div class="main-searchbox-container">
                     <div class="search-box">
                         <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" />
-                        <div class="dropdown" id="dropdown"></div>
+                        <div class="dropdown-container">
+                            <div class="dropdown" id="dropdown"></div>
+                        </div>
                     </div>
                     <div class="search-icon">
-                        <img src="images/search.png" id="img7">
+                        <img src="../images/search.png" id="img7">
                     </div>
                 </div>
             </div>
+            
 
         </div>
     </div>
@@ -100,10 +113,10 @@
 </div>
 
 
-<!-- Total BBA Clg Showcase -->
+<!-- Total BBA Colleges Showcase -->
 <div class="colleges-bba">
     <div class="clg-bba-head">
-        <p id="p35">Top BBA Colleges</p>
+        <p id="p35">Top BBA Colleges<p>
     </div>
 
     <div class="college-desc2">
@@ -112,27 +125,27 @@
         <div class="clg7">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Shaheed Sukhdev College of Business Studies </p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/sscbs_logo.jpeg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Delhi</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#92 NIRF</p>
                 </div>
             </div>
 
@@ -149,7 +162,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">5 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -157,9 +170,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 4</p>
                         </div>
 
                     </div>
@@ -172,7 +185,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 540 - 5.4L</p>
                         </div>
                     </div>
                 </div>
@@ -182,27 +195,27 @@
         <div class="clg8">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Christ University</p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/christ_logo.png" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Bangalore</p>   
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#60 NIRF</p>
                 </div>
             </div>
 
@@ -219,7 +232,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">44 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -227,9 +240,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 2</p>
                         </div>
 
                     </div>
@@ -242,7 +255,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33"> INR 70K - 17L</p>
                         </div>
                     </div>
                 </div>
@@ -252,27 +265,27 @@
         <div class="clg9">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Narsee Monjee Institute of Management Studies </p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/nmims_logo.png" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Mumbai</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#21 NIRF</p>
                 </div>
             </div>
 
@@ -289,7 +302,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">62 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -297,9 +310,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 1</p>
                         </div>
 
                     </div>
@@ -312,7 +325,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 6L - 25.1L</p>
                         </div>
                     </div>
                 </div>
@@ -326,14 +339,14 @@
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim-logo.jpg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
@@ -367,7 +380,7 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
                             <p id="p31">4 . 8</p>
                         </div>
@@ -396,14 +409,14 @@
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim-logo.jpg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
@@ -437,7 +450,7 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
                             <p id="p31">4 . 8</p>
                         </div>
@@ -466,14 +479,14 @@
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim-logo.jpg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
@@ -507,7 +520,7 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
                             <p id="p31">4 . 8</p>
                         </div>
@@ -533,11 +546,11 @@
     <div class="navigate">
         <div class="navigate-bt">
             <div class="back-bt" id="previous-button2">
-                <button><img src="images/previous.png" id="img8"><button>
+                <button><img src="../images/previous.png" id="img8"><button>
             </div>
 
             <div class="front-bt" id="next-button2">
-                <button><img src="images/right-arrow.png" id="img9"></button>
+                <button><img src="../images/right-arrow.png" id="img9"></button>
             </div>
         </div>
     </div>
@@ -545,10 +558,10 @@
 </div>
 
 
-<!-- Total MBA Clg Showcase -->
+<!-- Total BBA Clg Showcase -->
 <div class="colleges-mba">
     <div class="clg-mba-head">
-        <p id="p34">Top MBA Colleges</p>
+        <p id="p34">Top MBA / PGDMA Colleges</p>
     </div>
 
     <div class="college-desc">
@@ -561,14 +574,14 @@
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim-logo.jpg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
@@ -594,7 +607,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">20 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -602,9 +615,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 5</p>
                         </div>
 
                     </div>
@@ -617,7 +630,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 12L - 25L</p>
                         </div>
                     </div>
                 </div>
@@ -628,27 +641,27 @@
         <div class="clg2">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Indian Institute Of Management</p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim_bangalore_logo.png" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Bangalore</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#2 NIRF</p>
                 </div>
             </div>
 
@@ -665,7 +678,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">50 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -673,9 +686,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 7</p>
                         </div>
 
                     </div>
@@ -688,7 +701,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 12.5L - 24.5L</p>
                         </div>
                     </div>
                 </div>
@@ -698,27 +711,27 @@
         <div class="clg3">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Indian Institute Of Management (Kozhikode)</p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim_kozhikode_logo.png" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Kerala</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#3 NIRF</p>
                 </div>
             </div>
 
@@ -735,7 +748,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">72 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -743,9 +756,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 4</p>
                         </div>
 
                     </div>
@@ -758,7 +771,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 12.12L - 22.5L</p>
                         </div>
                     </div>
                 </div>
@@ -768,27 +781,27 @@
         <div class="clg4">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Indian Institute Of Management (Calcutta)</p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/iim_calcutta_logo.svg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Kolkata</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#5 NIRF</p>
                 </div>
             </div>
 
@@ -805,7 +818,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">95 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -813,9 +826,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 5</p>
                         </div>
 
                     </div>
@@ -828,7 +841,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">59K - 27.2L</p>
                         </div>
                     </div>
                 </div>
@@ -838,27 +851,27 @@
         <div class="clg5">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Indian Institute Of Management </p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/IIM_Lucknow_Logo.svg" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Lucknow</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#7 NIRF</p>
                 </div>
             </div>
 
@@ -875,7 +888,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">78 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -883,9 +896,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 4</p>
                         </div>
 
                     </div>
@@ -898,7 +911,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 1.38L - 26L</p>
                         </div>
                     </div>
                 </div>
@@ -908,27 +921,27 @@
         <div class="clg6">
             <div class="header1-clg1">
                 <div class="para1-clg1">
-                    <p id="p26">Indian Institute Of Management (Ahemdabad)</p>
+                    <p id="p26">Xavier School Of Management (XLRI)</p>
                 </div>
 
                 <div class="para1-img1">
-                    <img src="images/iim-logo.jpg" id="img22">
+                    <img src="../images/XLRI_logo.png" id="img22">
                 </div>
             </div>
 
             <div class="main-header2-clg1">
                 <div class="sub-header2-1-clg1">
                     <div class="locate-icon">
-                        <img src="images/location-pin.png" id="img23">
+                        <img src="../images/location-pin.png" id="img23">
                     </div>
 
                     <div class="location-text">
-                        <p id="p27">Gujrat</p>
+                        <p id="p27">Jharkhand</p>
                     </div>
                 </div>
 
                 <div class="sub-header2-2-clg1">
-                    <p id="p28">#1 NIRF</p>
+                    <p id="p28">#9 NIRF</p>
                 </div>
             </div>
 
@@ -945,7 +958,7 @@
                     <div class="sub-main-header4-part1">
 
                         <div class="sub-main-header4-1-clg1">
-                            <p id="p30">4 courses</p>
+                            <p id="p30">47 courses</p>
                         </div>
 
                         <div class="sub-main-header4-2-clg1">
@@ -953,9 +966,9 @@
                         </div>
 
                         <div class="sub-main-header4-3-clg1">   
-                            <img src="images/star.png" id="img24">
+                            <img src="../images/filled_star.png" id="img24">
 
-                            <p id="p31">4 . 8</p>
+                            <p id="p31">4 . 5</p>
                         </div>
 
                     </div>
@@ -968,7 +981,7 @@
 
                     <div class="main-fees-range-box">
                         <div class="sub-fees-range-box">
-                            <p id="p33">12L - 20L</p>
+                            <p id="p33">INR 75K - 30.6L</p>
                         </div>
                     </div>
                 </div>
@@ -980,18 +993,18 @@
     <div class="navigate">
         <div class="navigate-bt">
             <div class="back-bt" id="previous-button1">
-                <button><img src="images/previous.png" id="img8"><button>
+                <button><img src="../images/previous.png" id="img8"><button>
             </div>
 
             <div class="front-bt" id="next-button1">
-                <button><img src="images/right-arrow.png" id="img9"></button>
+                <button><img src="../images/right-arrow.png" id="img9"></button>
             </div>
         </div>
     </div>
 
 </div>
 
-
+<!-- 
 <div class="colleges-pgdma">
     <div class="clg-pgdma-head">
         <p id="p36">Top PGDMA Colleges</p>
@@ -1418,6 +1431,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="navigate">
@@ -1431,7 +1445,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!---Guidance-->
 <div class="guide-main-box">
@@ -1457,7 +1471,7 @@
         </div>
 
         <div class="det2">
-            <img src="images/Personalized-Counselling-at-Lock-My-College.webp" id="img20">
+            <img src="../images/Personalized-Counselling-at-Lock-My-College.webp" id="img20">
         </div>
     </div>
 
@@ -1479,7 +1493,7 @@
         </div>
 
        <div class="det4">
-            <img src="images/Mentorship-Program.webp" id="img21">
+            <img src="../images/Mentorship-Program.webp" id="img21">
        </div>
 
     </div>
@@ -1500,7 +1514,7 @@
         <div class="q1-box" id="q1-box">
             <div class="q1-sec1">
                 <div class="toggle1">
-                    <img src="images/arrowhead.png" id="img15">
+                    <img src="../images/arrowhead.png" id="img15">
                 </div>
                     
                 <div class="q1">
@@ -1518,7 +1532,7 @@
         <div class="q2-box">
             <div class="q2-sec1">
                 <div class="toggle2">
-                    <img src="images/arrowhead.png" id="img16">
+                    <img src="../images/arrowhead.png" id="img16">
                 </div>
                     
                 <div class="q2">
@@ -1536,7 +1550,7 @@
         <div class="q3-box">
             <div class="q3-sec1">
                 <div class="toggle3">
-                    <img src="images/arrowhead.png" id="img17">
+                    <img src="../images/arrowhead.png" id="img17">
                 </div>
                     
                 <div class="q3">
@@ -1554,7 +1568,7 @@
         <div class="q4-box">
             <div class="q4-sec1">
                 <div class="toggle4">
-                    <img src="images/arrowhead.png" id="img18">
+                    <img src="../images/arrowhead.png" id="img18">
                 </div>
                     
                 <div class="q4">
@@ -1572,7 +1586,7 @@
         <div class="q5-box">
             <div class="q5-sec1">
                 <div class="toggle5">
-                    <img src="images/arrowhead.png" id="img19">
+                    <img src="../images/arrowhead.png" id="img19">
                 </div>
                     
                 <div class="q5">
@@ -1605,7 +1619,7 @@
 
     <div class="link-sec1">
         <div class="footer-img">
-            <img src="images/Lock-My-College-SVGG-LOGO.svg" id="img10">
+            <img src="../images/Lock-My-College-SVGG-LOGO.svg" id="img10">
         </div>
 
         <div class="footer-para">
@@ -1631,10 +1645,10 @@
             </div>
             
             <div class="icons">
-                <img src="images/facebook.png" id="img11">
-                <img src="images/instagram.png" id="img12">
-                <img src="images/linkedin.png" id="img13">
-                <img src="images/youtube.png" id="img14">
+                <img src="../images/facebook.png" id="img11">
+                <img src="../images/instagram.png" id="img12">
+                <img src="../images/linkedin.png" id="img13">
+                <img src="../images/youtube.png" id="img14">
             </div>
         </div>
 
@@ -1648,7 +1662,7 @@
                 <div class="whatsapp-container">
                     <div class="whatsapp-sub-container">
                         <div class="whatsapp-img-container">
-                            <img src="images/whatsapp.png" id="img4">    
+                            <img src="../images/whatsapp.png" id="img4">    
                         </div>
                         <div class="whatsapp-desc-container">
                             <button id="b1">Whatsapp Now</button>
@@ -1668,9 +1682,9 @@
 
 
 
+<script src="../route.js"></script>
 <script src="script.js"></script>
-
-<script src="/js/route.js"></script>
+<script src="auth.js"></script>
 
 
     

@@ -99,9 +99,10 @@ $(document).ready(function() {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll(".subdet-fig1 img");
-    const submitButton = document.getElementById("submit");
+    const ratingInput = document.getElementById("placement_rating");
     let selectedRating = 0;
 
     // Handle mouse hover (temporary UI update)
@@ -116,244 +117,125 @@ document.addEventListener("DOMContentLoaded", function () {
         star.addEventListener("mouseleave", () => {
             highlightStars(selectedRating); // Restore last selected rating
         });
-    });
 
-    // Handle star click (select rating, allowing changes)
-    stars.forEach((star, index) => {
-        star.addEventListener("click", (event) => {
-            const rect = star.getBoundingClientRect();
-            const isHalf = event.clientX < rect.left + rect.width / 2;
-            selectedRating = index + (isHalf ? 0.5 : 1); // Store new rating
-            console.log("Selected Rating:", selectedRating);
-            highlightStars(selectedRating);
-            sendRatingToDatabase(selectedRating);   
-        });
-    });
-
-    // Function to highlight stars based on selection
-    function highlightStars(rating) {
-        stars.forEach((s, i) => {
-            if (i < Math.floor(rating)) {
-                s.src = "filled_star.png"; // Full star
-            } else if (i < rating) {
-                s.src = "half_star.png"; // Half star
-            } else {
-                s.src = "star.png"; // Empty star
-            }
-        });
-    }
-
-    function sendRatingToDatabase(rating) {
-        fetch("/placement_rating", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ rating: rating })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Server Response:", data);
-            alert("Rating submitted successfully!");
-        })
-        .catch(error => {
-            console.error("Error submitting rating:", error);
-        });
-    }
-});
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const stars = document.querySelectorAll(".subdet-fig2 img");
-    const submitButton = document.getElementById("submit");
-    let selectedRating = 0;
-
-    // Handle mouse hover (temporary UI update)
-    stars.forEach((star, index) => {
-        star.addEventListener("mousemove", (event) => {
-            const rect = star.getBoundingClientRect();
-            const isHalf = event.clientX < rect.left + rect.width / 2;
-            const hoverRating = index + (isHalf ? 0.5 : 1);
-            highlightStars(hoverRating);
-        });
-
-        star.addEventListener("mouseleave", () => {
-            highlightStars(selectedRating); // Restore last selected rating
-        });
-    });
-
-    // Handle star click (select rating, allowing changes)
-    stars.forEach((star, index) => {
-        star.addEventListener("click", (event) => {
-            const rect = star.getBoundingClientRect();
-            const isHalf = event.clientX < rect.left + rect.width / 2;
-            selectedRating = index + (isHalf ? 0.5 : 1); // Store new rating
-            console.log("Selected Rating:", selectedRating);
-            highlightStars(selectedRating);
-            sendRatingToDatabase(selectedRating);   
-        });
-    });
-
-    // Function to highlight stars based on selection
-    function highlightStars(rating) {
-        stars.forEach((s, i) => {
-            if (i < Math.floor(rating)) {
-                s.src = "filled_star.png"; // Full star
-            } else if (i < rating) {
-                s.src = "half_star.png"; // Half star
-            } else {
-                s.src = "star.png"; // Empty star
-            }
-        });
-    }
-
-    function sendRatingToDatabase(rating) {
-        fetch("/campus_life_rating", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ rating: rating })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Server Response:", data);
-            alert("Rating submitted successfully!");
-        })
-        .catch(error => {
-            console.error("Error submitting rating:", error);
-        });
-    }
-
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const stars = document.querySelectorAll(".subdet-fig3 img"); // Corrected selector
-    let selectedRating = 0;
-
-    function highlightStars(rating) {
-        stars.forEach((s, i) => {
-            if (i < Math.floor(rating)) {
-                s.src = "filled_star.png"; // Full star
-            } else if (i < rating) {
-                s.src = "half_star.png"; // Half star
-            } else {
-                s.src = "star.png"; // Empty star
-            }
-        });
-    }
-
-    // Handle mouse hover (temporary UI update)
-    stars.forEach((star, index) => {
-        star.addEventListener("mousemove", (event) => {
-            const rect = star.getBoundingClientRect();
-            const isHalf = event.clientX < rect.left + rect.width / 2;
-            const hoverRating = index + (isHalf ? 0.5 : 1);
-            highlightStars(hoverRating);
-        });
-
-        star.addEventListener("mouseleave", () => {
-            highlightStars(selectedRating); // Restore last selected rating
-        });
-
-        // Handle click (select rating)
+        // Handle star click (select rating, allowing changes)
         star.addEventListener("click", (event) => {
             const rect = star.getBoundingClientRect();
             const isHalf = event.clientX < rect.left + rect.width / 2;
             selectedRating = index + (isHalf ? 0.5 : 1);
-            console.log("Selected Rating:", selectedRating);
+            ratingInput.value = selectedRating;
             highlightStars(selectedRating);
-            sendRatingToDatabase(selectedRating);
+
+            console.log(ratingInput);
         });
     });
 
-    function sendRatingToDatabase(rating) {
-        fetch("/college_curriculum_rating  ", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ rating: rating })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Server Response:", data);
-            alert("Rating submitted successfully!");
-        })
-        .catch(error => {
-            console.error("Error submitting rating:", error);
+    function highlightStars(rating) {
+        stars.forEach((s, i) => {
+            if (i < Math.floor(rating)) {
+                s.src = "images/filled_star.png";
+            } else if (i < rating) {
+                s.src = "images/half_star.png";
+            } else {
+                s.src = "images/star.png";
+            }
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll(".subdet-fig2 img");
+    const ratingInput = document.getElementById("campus_life_rating");
+    let selectedRating = 0;
+
+    // Handle mouse hover (temporary UI update)
+    stars.forEach((star, index) => {
+        star.addEventListener("mousemove", (event) => {
+            const rect = star.getBoundingClientRect();
+            const isHalf = event.clientX < rect.left + rect.width / 2;
+            const hoverRating = index + (isHalf ? 0.5 : 1);
+            highlightStars(hoverRating);
+        });
+
+        star.addEventListener("mouseleave", () => {
+            highlightStars(selectedRating);
+        });
+
+        // Handle star click (select rating, allowing changes)
+        star.addEventListener("click", (event) => {
+            const rect = star.getBoundingClientRect();
+            const isHalf = event.clientX < rect.left + rect.width / 2;
+            selectedRating = index + (isHalf ? 0.5 : 1);
+            ratingInput.value = selectedRating;
+            highlightStars(selectedRating);
+
+            console.log(ratingInput);
+        });
+    });
+
+    function highlightStars(rating) {
+        stars.forEach((s, i) => {
+            if (i < Math.floor(rating)) {
+                s.src = "images/filled_star.png";
+            } else if (i < rating) {
+                s.src = "images/half_star.png";
+            } else {
+                s.src = "images/star.png";
+            }
+        });
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll(".subdet-fig3 img");
+    const ratingInput = document.getElementById("faculty_rating");
+    let selectedRating = 0;
+
+    // Handle mouse hover (temporary UI update)
+    stars.forEach((star, index) => {
+        star.addEventListener("mousemove", (event) => {
+            const rect = star.getBoundingClientRect();
+            const isHalf = event.clientX < rect.left + rect.width / 2;
+            const hoverRating = index + (isHalf ? 0.5 : 1);
+            highlightStars(hoverRating);
+        });
+
+        star.addEventListener("mouseleave", () => {
+            highlightStars(selectedRating);
+        });
+
+        // Handle star click (select rating, allowing changes)
+        star.addEventListener("click", (event) => {
+            const rect = star.getBoundingClientRect();
+            const isHalf = event.clientX < rect.left + rect.width / 2;
+            selectedRating = index + (isHalf ? 0.5 : 1);
+            ratingInput.value = selectedRating;
+            highlightStars(selectedRating);
+
+            console.log(ratingInput);
+        });
+    });
+
+    function highlightStars(rating) {
+        stars.forEach((s, i) => {
+            if (i < Math.floor(rating)) {
+                s.src = "images/filled_star.png";
+            } else if (i < rating) {
+                s.src = "images/half_star.png";
+            } else {
+                s.src = "images/star.png";
+            }
+        });
+    }
+});
+
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll(".subdet-fig4 img");
-    let selectedRating = 0;
-
-    function highlightStars(rating) {
-        stars.forEach((s, i) => {
-            if (i < Math.floor(rating)) {
-                s.src = "filled_star.png"; // Full star
-            } else if (i < rating) {
-                s.src = "half_star.png"; // Half star
-            } else {
-                s.src = "star.png"; // Empty star
-            }
-        });
-    }
-
-    function sendRatingToDatabase(rating) {
-        fetch("/infrastructure_rating", {
-            method: "POST", 
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ rating: rating })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Server Response:", data);
-            alert("Rating submitted successfully!");
-        })
-        .catch(error => {
-            console.error("Error submitting rating:", error);
-        });
-    }
-
-    // Handle hover and click events
-    stars.forEach((star, index) => {
-        star.addEventListener("mousemove", (event) => {
-            const rect = star.getBoundingClientRect();
-            const isHalf = event.clientX < rect.left + rect.width / 2;
-            const hoverRating = index + (isHalf ? 0.5 : 1);
-            highlightStars(hoverRating);
-        });
-
-        star.addEventListener("mouseleave", () => {
-            highlightStars(selectedRating);
-        });
-
-        star.addEventListener("click", (event) => {
-            const rect = star.getBoundingClientRect();
-            const isHalf = event.clientX < rect.left + rect.width / 2;
-            selectedRating = index + (isHalf ? 0.5 : 1);
-            console.log("Selected Rating:", selectedRating);
-            highlightStars(selectedRating);
-            sendRatingToDatabase(selectedRating);
-        });
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const stars = document.querySelectorAll(".subdet-fig5 img");
-    const submitButton = document.getElementById("submit");
+    const ratingInput = document.getElementById("college_curriculum_rating");
     let selectedRating = 0;
 
     // Handle mouse hover (temporary UI update)
@@ -366,81 +248,80 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         star.addEventListener("mouseleave", () => {
-            highlightStars(selectedRating); // Restore last selected rating
+            highlightStars(selectedRating);
         });
-    });
 
-    // Handle star click (select rating, allowing changes)
-    stars.forEach((star, index) => {
+        // Handle star click (select rating, allowing changes)
         star.addEventListener("click", (event) => {
             const rect = star.getBoundingClientRect();
             const isHalf = event.clientX < rect.left + rect.width / 2;
-            selectedRating = index + (isHalf ? 0.5 : 1); // Store new rating
-            console.log("Selected Rating:", selectedRating);
+            selectedRating = index + (isHalf ? 0.5 : 1);
+            ratingInput.value = selectedRating;
             highlightStars(selectedRating);
-            sendRatingToDatabase(selectedRating);   
+
+            console.log(ratingInput);
         });
     });
 
-    // Function to highlight stars based on selection
     function highlightStars(rating) {
         stars.forEach((s, i) => {
             if (i < Math.floor(rating)) {
-                s.src = "filled_star.png"; // Full star
+                s.src = "images/filled_star.png";
             } else if (i < rating) {
-                s.src = "half_star.png"; // Half star
+                s.src = "images/half_star.png";
             } else {
-                s.src = "star.png"; // Empty star
+                s.src = "images/star.png";
             }
-        });
-    }
-
-    function sendRatingToDatabase(rating) {
-        fetch("/get_faculty_rating", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ rating: rating })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Server Response:", data);
-            alert("Rating submitted successfully!");
-        })
-        .catch(error => {
-            console.error("Error submitting rating:", error);
         });
     }
 });
 
 
-// function colorStars(rating) {
-//     const stars = document.querySelectorAll(".star");
-    
-//     stars.forEach(star => {
-//         let value = parseFloat(star.getAttribute("data-value"));
-//         console.log(value)
-
-//         if (value <= rating) {
-//             star.src = "images/filled_star.png"; // Correct
-//         } else if (value - 0.5 <= rating) {
-//             star.src = "images/half_star.png"; // Half star
-//         } else {
-//             star.src = "images/star.png"; // Empty star
-//         }
-//     });
-// }
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/get_overall_rating")
-        .then(response => response.json())
-        .then(data => {
-            console.log("Received Rating:", data.rating); // Debugging
-            if (data.rating !== null) {
-                colorStars(data.rating); // Call function to color stars
-                updateRatingText(data.rating); // Update the rating text
+    const stars = document.querySelectorAll(".subdet-fig5 img");
+    const ratingInput = document.getElementById("infrastructure_rating");
+    let selectedRating = 0;
+
+    // Handle mouse hover (temporary UI update)
+    stars.forEach((star, index) => {
+        star.addEventListener("mousemove", (event) => {
+            const rect = star.getBoundingClientRect();
+            const isHalf = event.clientX < rect.left + rect.width / 2;
+            const hoverRating = index + (isHalf ? 0.5 : 1);
+            highlightStars(hoverRating);
+        });
+
+        star.addEventListener("mouseleave", () => {
+            highlightStars(selectedRating);
+        });
+
+        // Handle star click (select rating, allowing changes)
+        star.addEventListener("click", (event) => {
+            const rect = star.getBoundingClientRect();
+            const isHalf = event.clientX < rect.left + rect.width / 2;
+            selectedRating = index + (isHalf ? 0.5 : 1);
+            ratingInput.value = selectedRating;
+            highlightStars(selectedRating);
+
+            console.log(ratingInput);
+        });
+    });
+
+    function highlightStars(rating) {
+        stars.forEach((s, i) => {
+            if (i < Math.floor(rating)) {
+                s.src = "images/filled_star.png";
+            } else if (i < rating) {
+                s.src = "images/half_star.png";
+            } else {
+                s.src = "images/star.png";
             }
-        })
-        .catch(error => console.error("Error fetching rating:", error));
+        });
+    }
 });
+
+
+
+
+

@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IIM Ahmedabad - Hostel and Campus</title>
     <link rel="stylesheet" href="clg1.css">
+    <link rel="stylesheet" href="../navbar.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 <body>
 
     <div class="navbar">
         <div class="nav-sec1">
             <div class="logo-container">
-                <a href="/render_index"><img src="images/LMC-web-logo.webp" id="img1"></a>
+                <a href="/render_index"><img src="/images/LMC-web-logo.webp" id="img1"></a>
             </div>
             <div class="tagline">
                 <p id="p1">#Your Smarter Choice</p>
@@ -19,20 +24,23 @@
         </div>
         <div class="nav-sec2">
             <div class="link1">
-                <a href="index.html" id="a1">Home</a>
+                <a href="/render_index" id="a1">Home</a>
             </div>
-            <!-- <div class="link2">
-                <a href="#" id="a2">About</a>
-            </div>
-            <div class="link3">
-                <a href="#" id="a3">FAQ</a>
-            </div> -->
         </div>
         <div class="nav-sec3">
             <div class="register">
-                <a href="#" id="a4">Register</a>
+                <a href="/register" id="a4">Register</a>
+            </div>
+
+            <div class="login-panel" id="login-panel">
+                <div class="login-panel-content">
+                    <img src="/images/graduate.png" id="user-avatar">
+                    <p id="user-name">Welcome, User</p>
+                    <button id="logout-btn">Logout</button>
+                </div>
             </div>
         </div>
+
     </div>
     
     <div class="Hero-img-head2">
@@ -50,8 +58,11 @@
             <div class="Cut-offs-link">
                 <a href="/iim_ahemdabad_cutoff" id="Cut-offs-text">Cut Off</a>
             </div>
+            <!-- <div class="HC-link">
+                <a href="/iim_ahemdabad_Hostel&Campus" id="HC-text">Hostel and Campus</a>
+            </div> -->
             <div class="Reviews-link">
-                <a href="/render_all_reviews" id="Reviews-text">Reviews</a>
+                <a href="/iim_ahemdabad_render_all_reviews" id="Reviews-text">Reviews</a>
             </div>
         </div>
     </div>
@@ -262,5 +273,8 @@
         </div>
     </div>
 
+    <script src="/auth.js"></script>
+    <script src="handle_script.js"></script>
+    
 </body>
 </html>
